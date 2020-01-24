@@ -8,6 +8,7 @@ t = -5:0.01:10
 @manipulate for t₀ in -3:0.2:5
 
     p1 = plot(t, Λ.(t),
+            framestyle = :origin,
             ylims = (-1,2),
             legend=:false,
             xlab = "t",
