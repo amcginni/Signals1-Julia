@@ -1,5 +1,6 @@
 # This file demonstates the time-shift property for CT signals
 using Plots, Interact
+inspectdr();
 
 f(t::Real) = ifelse(t < -1, zero(t), ifelse(t < 0, t+1, ifelse(t < 1, -t+1, zero(t)) ) ) #unit triangle function
 
@@ -25,6 +26,6 @@ t = -5:0.01:10
         ylab = "f(t-t_0)",
         xticks=xticks,
         )
-    plot(p1, p2, layout = (2,1) )
-
+    fig = plot(p1, p2, layout = (2,1) )
+	display(fig)
 end

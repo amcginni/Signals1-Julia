@@ -11,5 +11,5 @@ t = -10:Δt:10 #time index
 p2 = plot( t, x.(t), color=:red, lab="x(t)", xlab="t") #p2 is a CT plot
 
 plot(p1, p2, layout = (2,1)) #display plots p1 and p2
-path = "C:/temp/"
+path = "../../output"
 savefig( path*"CTandDTplots.png") #save the plot in path

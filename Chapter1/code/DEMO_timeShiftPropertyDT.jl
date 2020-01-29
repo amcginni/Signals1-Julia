@@ -1,8 +1,11 @@
 # This file demonstates the time-shift property for DT signals
 using Plots, Interact
 
+
 u(n::Integer) = ifelse(n < 0, zero(n), one(n)) #unit step function
 f(n::Integer) = u(n)-u(n-3) #unit step function
+
+inspectdr();
 
 n = -5:10
 @manipulate for n₀ in -3:5
@@ -35,6 +38,6 @@ n = -5:10
         color = :blue,
         markercolor = :blue,
         )
-    plot(p1, p2, layout = (2,1) )
-
+    fig = plot(p1, p2, layout = (2,1) )
+	display(fig);
 end
