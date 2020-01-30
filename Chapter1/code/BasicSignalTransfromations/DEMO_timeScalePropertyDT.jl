@@ -2,15 +2,15 @@
 using Plots, Interact
 
 u(n::Integer) = ifelse(n < 0, zero(n), one(n)) #unit step function
-x(n::Integer) = u(n)-u(n-3) #unit step function
+x(n::Integer) = n *( u(n)-u(n-11) )
 
-n = -5:10
-@manipulate for n₀ in -3:5
+n = -2:15
+@manipulate for a in 1:5
 
     p1 = plot(n,
             x.(n),
             framestyle = :origin,
-            ylims = (-1,2),
+            ylims = (-1,12),
             legend=:false,
             xlab = "n",
             ylab = "x[n]",
@@ -21,15 +21,13 @@ n = -5:10
             )
 
     xlims = Vector(-5:8)
-    xticks = ( cat(xlims,n₀,dims=1), cat(string.(xlims),"n_0",dims=1) )
     p2 = plot(n,
-        x.(n.-n₀),
+        x.(a.*n),
         framestyle = :origin,
-        ylims = (-1,2),
+        ylims = (-1,12),
         legend=:false,
         xlab = "n",
-        ylab = "x[n-n_0]",
-        xticks=xticks,
+        ylab = "x[an]",
         line = :stem,
         marker = :circle,
         color = :blue,
