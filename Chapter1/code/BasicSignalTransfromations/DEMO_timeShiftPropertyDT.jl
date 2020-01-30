@@ -2,18 +2,18 @@
 using Plots, Interact
 
 u(n::Integer) = ifelse(n < 0, zero(n), one(n)) #unit step function
-f(n::Integer) = u(n)-u(n-3) #unit step function
+x(n::Integer) = u(n)-u(n-3) #unit step function
 
 n = -5:10
 @manipulate for n₀ in -3:5
 
     p1 = plot(n,
-            f.(n),
+            x.(n),
             framestyle = :origin,
             ylims = (-1,2),
             legend=:false,
             xlab = "n",
-            ylab = "u(n)",
+            ylab = "x[n]",
             line = :stem,
             marker = :circle,
             color = :blue,
@@ -28,7 +28,7 @@ n = -5:10
         ylims = (-1,2),
         legend=:false,
         xlab = "n",
-        ylab = "u(n-n_0)",
+        ylab = "x[n-n_0]",
         xticks=xticks,
         line = :stem,
         marker = :circle,
