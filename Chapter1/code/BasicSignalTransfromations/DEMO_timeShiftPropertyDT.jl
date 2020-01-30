@@ -2,7 +2,7 @@
 using Plots, Interact
 
 u(n::Integer) = ifelse(n < 0, zero(n), one(n)) #unit step function
-x(n::Integer) = u(n)-u(n-3) #unit step function
+x(n::Integer) = u(n)-u(n-3)
 
 n = -5:10
 @manipulate for n₀ in -3:5
