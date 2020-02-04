@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath} %for hookrightarrow
+\usepackage{xcolor} %for textcolor
+\usepackage{listingsutf8}
+\pgfplotsset{compat=1.16}
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  postbreak=\mbox{\textcolor{blue}{$\hookrightarrow$}\space},
+}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+\pagestyle{empty} %suppress pagenumbers
+\section*{Problem S-2}
+\lstinputlisting{S2.jl}
+\input{../output/fig1.24.tex}
+\end{document}
