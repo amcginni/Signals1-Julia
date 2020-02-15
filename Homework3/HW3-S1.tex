@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath} %for hookrightarrow
+\usepackage{xcolor} %for textcolor
+\usepackage{listingsutf8}
+\usepackage{fancyhdr}
+
+\fancyhead[L R]{}
+\fancyhead[L]{\sc Andrew McGinnis}
+\fancyhead[C]{\sc EE 320 Homework 3}
+\fancyhead[R]{\sc Page \space\space of \space\space}
+\fancyfoot{} % clear the footer, suppressing auto-generated page number
+
+% Auto word wrap source code listings, and place a red arrow where a 
+% line is wrapped
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+\pagestyle{fancy}
+\section*{Problem S-1}
+\lstinputlisting{S1.jl}
+\input{/tmp/plotS1.tex}
+\end{document}
