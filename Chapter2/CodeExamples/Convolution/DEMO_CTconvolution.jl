@@ -48,7 +48,7 @@ f₀(τ,t₀) = x.(τ).*h.(t₀.-τ)
        framestyle = :origin,
        xlims = (minimum(t), maximum(t)),
        ylims=ylims,
-       lab = "x(tau)h(t_0-\tau)",
+       lab = "x(tau)h(t_0-tau)",
        xlab="tau",
        xticks=xticks,
        c=:purple, linewidth = 2)
