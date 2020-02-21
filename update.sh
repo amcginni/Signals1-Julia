@@ -10,4 +10,4 @@ git commit -p
 #Revert uncommited changes to directory tree
 git reset HEAD
 
-echo("If the commit was succesful, now do a git push");
+echo "If the commit was succesful, now do a git push";
