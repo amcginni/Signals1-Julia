@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath} %for hookrightarrow
+\usepackage{xcolor} %for textcolor
+\usepackage{listingsutf8}
+\usepackage{fancyhdr}
+
+\fancyhead[L R]{}
+\fancyhead[L]{\sc Andrew McGinnis}
+\fancyhead[C]{\sc EE 320 Homework 5}
+\fancyhead[R]{\sc Page \space\space of \space\space}
+\fancyfoot{} % clear the footer, suppressing auto-generated page number
+
+% Auto word wrap source code listings, and place a red arrow where a 
+% line is wrapped
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+\pagestyle{fancy}
+\section*{Problem S-3}
+\lstinputlisting{S3.jl}
+
+This code modifies the input signal Speech.wav by convolving it with the impulse response $[1, 0, ... , 0, 0.25]$, a quarter second long, to create a quarter-amplitude echo lagging the input by a quarter second.
+\end{document}
